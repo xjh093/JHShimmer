@@ -10,6 +10,10 @@ A Shimmer Label.
 
 # Log
 
+#### 2020-03-20
+- fix a bug.
+- add 'shimmerAlpha'.
+
 #### 2019-08-09
 - upload.
 
