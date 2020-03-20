@@ -57,6 +57,26 @@
     shimmer.shimmerDuration = 2;
     [shimmer startShimmer];
     }
+    
+    {
+    JHShimmer *shimmer = [[JHShimmer alloc] init];
+    shimmer.frame = CGRectMake(CGRectGetMinX(_shimmer.frame), CGRectGetMaxY(_shimmer.frame)  + 70, 200, 50);
+    shimmer.text = @"A shimer Label.";
+    shimmer.textAlignment = 1;
+    shimmer.numberOfLines = 0;
+    shimmer.font = [UIFont systemFontOfSize:30];
+    shimmer.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:shimmer];
+    
+    shimmer.shimmerWidth = 30;
+    shimmer.shimmerColor = [UIColor whiteColor];
+    shimmer.shimmerBackgroundColor = [UIColor clearColor];
+    shimmer.style = JHShimmerStyle_Normal;
+    shimmer.animationStyle = JHShimmerAnimationStyle_EaseInOut;
+    shimmer.shimmerDuration = 2;
+//    shimmer.shimmerAlpha = 0.4;
+    [shimmer startShimmer];
+    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

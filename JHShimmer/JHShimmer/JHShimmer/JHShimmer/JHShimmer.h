@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger, JHShimmerStyle) {
+    JHShimmerStyle_Unknow,
     JHShimmerStyle_Normal,
     JHShimmerStyle_Slanted,
 };
@@ -35,6 +36,8 @@ typedef NS_ENUM(NSUInteger, JHShimmerAnimationStyle) {
 @property (nonatomic,  assign) CGFloat                  shimmerInterval;
 /// Default is NO.
 @property (nonatomic,  assign) BOOL                     shimmerOnce;
+/// Default is 1.
+@property (nonatomic,  assign) CGFloat                  shimmerAlpha;
 /// JHShimmerStyle_Normal
 @property (nonatomic,  assign) JHShimmerStyle           style;
 /// JHShimmerAnimationStyle_EaseInOut

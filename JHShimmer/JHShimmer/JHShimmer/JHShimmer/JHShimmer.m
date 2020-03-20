@@ -78,7 +78,7 @@
 - (void)setupForStyle
 {
     if (_style == JHShimmerStyle_Normal) {
-        _coverMaskView.backgroundColor = [UIColor greenColor];
+        _coverMaskView.backgroundColor = [UIColor whiteColor];
     }else if (_style == JHShimmerStyle_Slanted) {
         CGSize size = _coverMaskView.bounds.size;
         UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
@@ -161,6 +161,11 @@
         _style = style;
         [self setupForStyle];
     }
+}
+
+- (void)setShimmerAlpha:(CGFloat)shimmerAlpha{
+    _shimmerAlpha = shimmerAlpha;
+    _coverMaskView.alpha = shimmerAlpha;
 }
 
 - (UILabel *)coverLabel{
